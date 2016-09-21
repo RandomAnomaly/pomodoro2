@@ -13,7 +13,7 @@
 <body>
     <div class=" content" ng-controller="pomodoroController">
         <div>
-            <div class="col-xs-4 col-xs-push-4">
+            <div class="col-xs-8 col-xs-push-2">
             <svg width="100%" height="100%" viewBox="0 0 100 100">
 
                 <filter id="glow">
@@ -26,8 +26,8 @@
 
 
 
-                <rect x="45" y="1" width="10" height="30" fill="none" stroke="orange" filter="url(#glow)" onclick="console.log('click!');" />
-                <text x="60" y="30" fill="orange" font-family="monospace">{{timeRemaining}}</text>
+                <rect x="45" y="1" width="10" height="30" fill="none" stroke={{color}} filter="url(#glow)" onclick="console.log('click!');" />
+                <text x="60" y="30" fill={{color}} font-family="monospace" filter="url(#glow)">{{timeRemaining}}</text>
             </svg>
             </div>
         </div>
