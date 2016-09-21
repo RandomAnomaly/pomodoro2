@@ -8,8 +8,18 @@
 
 <body>
     <div class="content">
-        <svg width="100%" viewBox="0 0 100 100" >
-            <rect x="45" width="10" height="30" fill="red" />
+        <svg width="100%" viewBox="0 0 100 100">
+
+            <filter id="glow">
+                <feGaussianBlur stdDeviation="0.3" result="coloredBlur" />
+                <feMerge>
+                    <feMergeNode in="coloredBlur" />
+                    <feMergeNode in="SourceGraphic" />
+                </feMerge>
+            </filter>
+
+
+            <rect x="45" width="10" height="30" fill="red" filter="url(#glow)" />
         </svg>
         <div class="overlay" width="100%" height="100%">
         </div>
